@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300&display=swap');
+
+:root {
+    --black: #646262;
+    --orange: #FA692F;
+    --green:#005968;
+  }
+  *{
+    outline: none;
+    box-sizing: border-box;
+  }
+  .categories{
+    margin-top: 20px;
+    text-align: center;
+    color:var(--black);
+  }
+  .cat-heading{
+    font-size: 3rem;
+    padding-bottom: 20px;
+  }
+  .card{
+    height: 420px;
+    width: 300px;
+    text-align: center;
+    border: none;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  .card>h3{
+    color: var(--black);
+    transition: 0.3s;
+  }
+  
+  .card:hover{
+    scale: 1.05;
+  }
+  .card:hover .card-title{
+    
+    color: var(--orange);
+  }
+  .card>img{
+    width: 100%;
+    overflow: hidden;
+  }
+  .cat-col{
+    display: flex;
+    justify-content: center;
+  }
+  .left-cat-col{
+    justify-content: flex-end;
+  }
+  .right-cat-col{
+    justify-content: flex-start;
+  }
+  .cat-row{
+    margin-top: 20px;
+  }
+  @media only screen and (max-width: 1000px) {
+    .left-cat-col{
+        justify-content: center;
+    }
+    .right-cat-col{
+        justify-content: center;
+    }
+    .card{
+        margin-top: 50px;
+    }
+  }
+  @media only screen and (max-width: 1000px) {
+    .left-cat-col{
+        justify-content: center;
+    }
+    .right-cat-col{
+        justify-content: center;
+    }
+  }
