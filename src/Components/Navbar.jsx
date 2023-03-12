@@ -27,16 +27,16 @@ function Navbar() {
                                         <a className="nav-link" href="#">Learn More</a>
                                     </li>
                                     <li className="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                        <form class="form-inline my-2 my-lg-0">
-                                            <input class="form-control mr-sm-2 search-box" type="search" placeholder="Search" aria-label="Search"></input>
-                                            <button class="btn  my-2 my-sm-0 search-btn" type="submit">Search</button>
+                                        <form className="form-inline my-2 my-lg-0">
+                                            <input className="form-control mr-sm-2 search-box" type="search" placeholder="Search" aria-label="Search"></input>
+                                            <button className="btn  my-2 my-sm-0 search-btn" type="submit">Search</button>
                                         </form>
                                     </li>
                                     <li className="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                        <a className="nav-link" href="#"><i class="fa-solid fa-cart-shopping nav-fa"></i></a>
+                                        <a className="nav-link" href="#"><i className="fa-solid fa-cart-shopping nav-fa"></i></a>
                                     </li>
                                     <li className="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                        <a className="nav-link" href="#"><i class="fa-solid fa-user  nav-fa"></i></a>
+                                        <a className="nav-link" href="#"><i className="fa-solid fa-user  nav-fa"></i></a>
                                     </li>
                                 </ul>
 

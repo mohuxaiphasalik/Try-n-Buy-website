@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #646262;
+    --orange: #FA692F;
+    --green: #005968;
+}
+
+.productContent {
+    position: relative;
+    margin-left: 20%;
+    padding: 10px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+@media(max-width:768px) {
+    .productContent {
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+        margin-left: 0px;
+    }
+}

@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #646262;
+    --orange: #FA692F;
+    --green: #005968;
+}
+
+.card {
+    text-align: left;
+    height: 540px;
+    width: 260px;
+    position: relative;
+    margin: 2rem;
+
+
+}
+
+.card>img {
+    width: 260px;
+    height: 390px;
+}
+
+
+.cardImage {
+    width: 260px;
+    height: 390px;
+}
+
+.card>h3 {
+    color: rgb(2, 2, 2);
+    font-weight: bolder;
+    margin-top: 2%;
+    margin: 0px;
+}
+
+h3 {
+    margin: 0px;
+}
+
+.description {
+    color: var(--black);
+    font-size: 0.8rem;
+    margin: 0px;
+    padding: 5px 0px;
+}
+
+.newPrice {
+    color: var(--green)
+}
+
+.originalPrice {
+    text-decoration: line-through;
+    color: var(--black);
+    margin-left: 10px;
+
+}
+
+.price {
+    display: flex;
+    margin: 0px;
+}
+
+.discount {
+    position: absolute;
+    top: 10px;
+    margin-left: 20px;
+    color: var(--green);
+    font-weight: bold;
+}
+
+.text {
+    border: 1px solid #a6a3a3;
+    border-top: 0px;
+    padding: 0px 10px;
+    height: 150px;
+}
