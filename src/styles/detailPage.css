@@ -1,0 +1,224 @@
+:root {
+    --black: #646262;
+    --orange: #FA692F;
+    --green: #005968;
+}
+
+.detailContainer {
+
+    width: 100%;
+    padding: 1rem;
+
+}
+
+.detailLeft {
+    height: 700px;
+    text-align: center;
+}
+
+.detailRight {
+    /* height: 500px; */
+    padding: 2rem;
+}
+
+.detailImg {
+    height: 100%;
+}
+
+/* Right Side Styling */
+.detailTitle {
+    font-weight: bolder;
+    font-size: 3rem;
+}
+
+.detailNewPrice {
+    font-weight: bolder;
+}
+
+.color {
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+.colorSelector {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border: 2px solid grey;
+}
+
+.size {
+    font-weight: bolder;
+
+}
+
+.sizeSelection {
+    display: flex;
+}
+
+.btnSize {
+    color: var(--black);
+    padding: 5px;
+}
+
+.fa-ruler {
+    transform: scale(1.5);
+    margin-right: 8px;
+}
+
+.sizeChart {
+    margin-left: 1rem;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: larger;
+}
+
+.detailButtons {
+    display: flex;
+}
+
+.detailButtons>button {
+    margin-top: 1rem;
+    padding: 8px;
+    font-size: 1.2rem;
+    box-shadow: 0px 20px 20px var(--black);
+}
+
+.tryOnBtn {
+    background-color: var(--green);
+    color: white;
+
+    border: 2px solid var(--green);
+}
+
+.SizePredictionBtn {
+    margin-left: 2rem;
+    color: var(--green);
+    border: 3px solid var(--green);
+}
+
+.stockStatus {
+    color: var(--green);
+    margin-top: 2rem;
+}
+
+.buyMenu {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* .quantityCount {
+    border: 1px solid black;
+    padding: 2px 8px;
+}  */
+.buyMenu {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    /* padding: 10px; */
+}
+
+.quantitySelector {
+    display: flex;
+    align-items: center;
+    /* padding: 5px; */
+}
+
+.quantityCount {
+    display: inline-block;
+    width: 50px;
+    height: 32px;
+    text-align: center;
+    border: 1px solid black;
+    margin: 0 10px;
+    padding-top: 3px;
+    margin-left: 0px;
+
+}
+
+.incrementBtn,
+.decrementBtn,
+.addToCart,
+.BuyNow {
+    display: inline-block;
+    height: 32px;
+    border: 1px solid var(--black);
+    text-align: center;
+    margin-right: 10px;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 6px;
+}
+
+.incrementBtn,
+.decrementBtn {
+    width: 80px;
+}
+
+.addToCart {
+    background-color: var(--black);
+    border: 1px solid var(--black);
+    color: white;
+    padding: 0px 10px;
+    transition: 0.3s;
+}
+
+.addToCart:hover {
+    background-color: black;
+}
+
+.BuyNow {
+    border: 1px solid var(--black);
+    color: var(--black);
+    padding: 0px 10px;
+    transition: 0.3s;
+}
+
+.BuyNow:hover {
+    background-color: black;
+    color: white;
+}
+
+.DetailDescTitle {
+    font-weight: 800;
+}
+
+.DetailDesc {
+    margin-top: 20px;
+    width: 95%;
+}
+
+.learnMore {
+    text-decoration: underline !important;
+}
+
+@media only screen and (max-width: 490px) {
+    .detailLeft {
+        max-width: 100%;
+    }
+
+    .detailLeft>img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .addToCart,
+    .BuyNow {
+        margin-top: 20px;
+    }
+
+    .detailContainer {
+        margin: 0;
+        padding: auto 0px;
+    }
+
+    .detailRight {
+        padding: 1rem 0rem;
+    }
+
+    .detailTitle {
+        font-size: 2rem;
+    }
+
+
+}

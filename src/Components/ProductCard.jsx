@@ -1,11 +1,12 @@
 import React from 'react'
 import img from "../data/images/boyT1.png"
 import '../styles/productCard.css'
+import { Link } from 'react-router-dom';
 export default function ProductCard(props) {
     // const img = require(props.img)
     console.log(typeof props.img);
     return (
-        <div className="card">
+        <Link to='/productDetails' className="card">
 
             <img className="cardImage" src={img} alt={props.title} />
             <div className="text">
@@ -16,6 +17,6 @@ export default function ProductCard(props) {
                     {props.sale && <span className="originalPrice">Rs. {(props.originalPrice).toLocaleString()}</span>}
                 </span>
                 {props.sale && <h5 className="discount">{props.discount}</h5>}</div>
-        </div>
+        </Link>
     )
 }

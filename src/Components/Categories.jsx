@@ -5,6 +5,7 @@ import newArrival from '../styles/images/new.png'
 import child from '../styles/images/child.png'
 import men from '../styles/images/men.png'
 import ladies from '../styles/images/ladies.png'
+import { Link } from 'react-router-dom';
 
 function Categories() {
     return (
@@ -13,40 +14,40 @@ function Categories() {
             <div className="container categories">
                 <div className="row cat-row">
                     <div className="col-lg-6 col-md-6 cat-col left-cat-col">
-                        <div className="card">
-                            <img src={designed} alt="" className="card-img" />
-                            <h3 className="card-title">Designed For You</h3>
-                        </div>
+                        <Link to="/products" className="card-home">
+                            <img src={designed} alt="" className="card-home-img" />
+                            <h3 className="card-home-title">Designed For You</h3>
+                        </Link>
                     </div>
                     <div className="col-lg-6 col-md-6 cat-col right-cat-col">
-                        <div className="card">
-                            <img src={newArrival} alt="" className="card-img" />
-                            <h3 className="card-title"> New Arrival</h3>
-                        </div>
+                        <Link to="/products" className="card-home">
+                            <img src={newArrival} alt="" className="card-home-img" />
+                            <h3 className="card-home-title"> New Arrival</h3>
+                        </Link>
                     </div>
                 </div>
                 <div className="row cat-row">
                     <div className="col-lg-4 col-md-6 cat-col left-cat-col">
-                        <div className="card">
-                            <img src={ladies} alt="" className="card-img" />
-                            <h3 className="card-title">Ladies</h3>
-                        </div>
+                        <Link to="/products" className="card-home">
+                            <img src={ladies} alt="" className="card-home-img" />
+                            <h3 className="card-home-title">Ladies</h3>
+                        </Link>
                     </div>
                     <div className="col-lg-4 col-md-6 cat-col">
-                        <div className="card">
-                            <img src={child} alt="" className="card-img" />
-                            <h3 className="card-title"> Children</h3>
-                        </div>
+                        <Link to="/products" className="card-home">
+                            <img src={child} alt="" className="card-home-img" />
+                            <h3 className="card-home-title"> Children</h3>
+                        </Link>
                     </div>
                     <div className="col-lg-4 cat-col right-cat-col">
-                        <div className="card">
-                            <img src={men} alt="" className="card-img" />
-                            <h3 className="card-title"> Men</h3>
-                        </div>
+                        <Link to="/products" className="card-home">
+                            <img src={men} alt="" className="card-home-img" />
+                            <h3 className="card-home-title"> Men</h3>
+                        </Link>
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     )
 }
 export default Categories

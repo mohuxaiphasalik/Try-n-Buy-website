@@ -3,6 +3,7 @@ import '../styles/header.css'
 import first from '../styles/images/1st.jpg'
 import second from '../styles/images/2nd.jpg'
 import third from '../styles/images/3rd.jpg'
+import { Link } from 'react-router-dom';
 function Header() {
     return (
         <div id='header' className='header'>
