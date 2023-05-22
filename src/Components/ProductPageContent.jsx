@@ -2,7 +2,18 @@ import React from 'react'
 import productsData from '../data/productsData'
 import ProductCard from './ProductCard'
 import '../styles/productPageContent.css'
+import { useEffect } from 'react';
 export default function ProductMain() {
+
+    async function test() {
+        const data = await fetch('http://localhost:4000/products');
+        console.log(data);
+    }
+
+    useEffect(() => {
+        test();
+    }, [])
+
     return (
         <div className="productContent">
             <ProductCard title={productsData[0].title} img={productsData[0].img} description={productsData[0].description}
