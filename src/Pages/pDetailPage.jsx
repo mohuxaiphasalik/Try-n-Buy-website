@@ -1,9 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 import '../styles/detailPage.css'
+import axios from 'axios';
+
+import { useLocation } from 'react-router-dom';
 import img from '../styles/images/DetailImages/boyt1.png'
-export default function PDetailPage() {
+export default function PDetailPage(props) {
+    // const [id, setid] = useState();
+    const location = useLocation();
+    const searchParams = new URLSearchParams(location.search);
+    const id = searchParams.get('id');
+    const [productDetail, setProductDetail] = useState([]);
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get(`http://localhost:4000/products/${id}`);
+                const data = response.data;
+                console.log(data)
+                setProductDetail(data);
+            } catch (error) {
+                console.log(error);
+            }
+        };
+
+        fetchData();
+    }, []);
+
+
+    console.log(id);
     const [count, setCount] = useState(1);
 
     function incrementCount() {
@@ -15,6 +40,7 @@ export default function PDetailPage() {
             setCount(count - 1);
         }
     }
+    console.log(props.id)
     return (
         <div>
             <Navbar />
@@ -22,11 +48,12 @@ export default function PDetailPage() {
                 <div className="detailLeft col-lg-6  col-sm-12 ">
                     <img src={img} alt="" className='detailImg' />
                 </div>
+
                 <div className="detailRight col-lg-6 col-sm-12 ">
-                    <h1 className="detailTitle">Boys Red T-Shirt</h1>
+                    <h1 className="detailTitle">{productDetail.title}</h1>
                     <div className="price">
-                        <h4 className="newPrice detailNewPrice">Rs. 3,143</h4>
-                        <div className="originalPrice">Rs. 4,490</div></div>
+                        <h4 className="newPrice detailNewPrice">{productDetail.newPrice}</h4>
+                        <div className="originalPrice">{productDetail.originalPrice}</div></div>
                     <div className="color">Color
                         <div className="colorSelector"></div>
                     </div>
@@ -60,7 +87,7 @@ export default function PDetailPage() {
                         <button className="addToCart">Add To Cart </button>
                         <button className="BuyNow">Buy Now</button>
                     </div>
-                    <p className="DetailDesc"><h5 className='DetailDescTitle'>Description:</h5> A red shirt for summer is a perfect way to add a pop of color to your wardrobe while staying cool in the hot weather. The lightweight fabric and bright hue make it an ideal choice for casual outings and outdoor activities.</p>
+                    <p className="DetailDesc"><h5 className='DetailDescTitle'>Description:</h5> {productDetail.description}</p>
                     <a href="" className="learnMore">LEARN MORE ABOUT TRY ON FEATURE🔗</a>
                 </div>
             </div>

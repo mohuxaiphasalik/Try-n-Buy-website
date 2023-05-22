@@ -4,11 +4,10 @@ import '../styles/productCard.css'
 import { Link } from 'react-router-dom';
 export default function ProductCard(props) {
     // const img = require(props.img)
-    console.log(typeof props.img);
+    // console.log(props.id);
     return (
-        <Link to='/productDetails' className="card">
-
-            <img className="cardImage" src={img} alt={props.title} />
+        <Link to={{ pathname: '/productDetails', search: `?id=${props.id}` }} className="card">
+            <img className="cardImage" src={props.img} alt={props.title} />
             <div className="text">
                 <h3 className="title">{props.title}</h3>
                 <p className="description">{props.description}</p>
