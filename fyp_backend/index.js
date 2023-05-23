@@ -98,6 +98,13 @@ mongoose.connection.on('connected', () => {
       default: 0,
       nonNegative: true,
     },
+    detailDescription: {
+      type: String,
+      required: true,
+    },
+    detailImage: {
+      type: String,
+    },
     discount: String
   });
 
