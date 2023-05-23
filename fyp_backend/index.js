@@ -1,4 +1,6 @@
 const express = require('express');
+const cors = require('cors');
+
 const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
 
@@ -6,6 +8,7 @@ const jwt = require('jsonwebtoken');
 require('dotenv').config();
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 mongoose.connect(process.env.MONGODB_URI, {
