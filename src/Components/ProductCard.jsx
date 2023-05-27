@@ -1,5 +1,4 @@
 import React from 'react'
-import img from "../data/images/boyT1.png"
 import '../styles/productCard.css'
 import { Link } from 'react-router-dom';
 export default function ProductCard(props) {
@@ -7,7 +6,7 @@ export default function ProductCard(props) {
     // console.log(props.id);
     return (
         <Link to={{ pathname: '/productDetails', search: `?id=${props.id}` }} className="card">
-            <img className="cardImage" src={props.img} alt={props.title} />
+            <img className="cardImage" src={`http://localhost:4000/images/${props.img}`} alt={props.title} />
             <div className="text">
                 <h3 className="title">{props.title}</h3>
                 <p className="description">{props.description}</p>

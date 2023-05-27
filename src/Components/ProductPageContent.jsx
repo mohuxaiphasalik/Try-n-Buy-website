@@ -38,3 +38,11 @@ export default function ProductMain() {
             ))}
         </div>)
 }
+
+// description: "Add some flair to your wardrobe with our vibrant red t-shirts!"
+// discount: "30% Off"
+// img: "../data/images/boyT1.png"
+// newPrice: 3143
+// originalPrice:5000
+// sale:true
+// title:"Red T-Shirt"

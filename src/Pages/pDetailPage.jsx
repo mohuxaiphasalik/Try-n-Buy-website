@@ -7,17 +7,17 @@ import axios from 'axios';
 import { useLocation } from 'react-router-dom';
 import img from '../styles/images/DetailImages/boyt1.png'
 export default function PDetailPage(props) {
-    // const [id, setid] = useState();
     const location = useLocation();
     const searchParams = new URLSearchParams(location.search);
     const id = searchParams.get('id');
-    const [productDetail, setProductDetail] = useState([]);
+    const [productDetail, setProductDetail] = useState({});
+
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const response = await axios.get(`http://localhost:4000/products/${id}`);
                 const data = response.data;
-                console.log(data)
+
                 setProductDetail(data);
             } catch (error) {
                 console.log(error);
@@ -25,10 +25,7 @@ export default function PDetailPage(props) {
         };
 
         fetchData();
-    }, []);
-
-
-    console.log(id);
+    }, [id]);
     const [count, setCount] = useState(1);
 
     function incrementCount() {
@@ -40,37 +37,36 @@ export default function PDetailPage(props) {
             setCount(count - 1);
         }
     }
-    console.log(props.id)
     return (
         <div>
             <Navbar />
             <div className="detailContainer row">
                 <div className="detailLeft col-lg-6  col-sm-12 ">
-                    <img src={img} alt="" className='detailImg' />
+                    <img src={`http://localhost:4000/images/${productDetail.img}`} alt="" className='detailImg' />
                 </div>
 
                 <div className="detailRight col-lg-6 col-sm-12 ">
                     <h1 className="detailTitle">{productDetail.title}</h1>
                     <div className="price">
-                        <h4 className="newPrice detailNewPrice">{productDetail.newPrice}</h4>
-                        <div className="originalPrice">{productDetail.originalPrice}</div></div>
+                        <h4 className="newPrice detailNewPrice">Rs. {productDetail.newPrice}</h4>
+                        <div className="originalPrice">{productDetail.sale && productDetail.originalPrice}</div></div>
                     <div className="color">Color
                         <div className="colorSelector"></div>
                     </div>
                     <div className="size">Size
                         <div className="sizeSelection">
-                            <div className="sizeDropDown"><div class="dropdown">
-                                <button class="btnSize dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <div className="sizeDropDown"><div className="dropdown">
+                                <button className="btnSize dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Select Size
                                 </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <div class="dropdown-item" href="#">Small</div>
-                                    <div class="dropdown-item" href="#">Medium</div>
-                                    <div class="dropdown-item" href="#">Large</div>
+                                <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <div className="dropdown-item" href="#">Small</div>
+                                    <div className="dropdown-item" href="#">Medium</div>
+                                    <div className="dropdown-item" href="#">Large</div>
                                 </div>
                             </div>
                             </div>
-                            <div className="sizeChart"><i class="fa-solid fa-ruler"></i>Size Chart</div>
+                            <div className="sizeChart"><i className="fa-solid fa-ruler"></i>Size Chart</div>
                         </div>
                     </div>
                     <div className="detailButtons">
