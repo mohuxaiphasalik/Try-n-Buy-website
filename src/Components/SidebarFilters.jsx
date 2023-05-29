@@ -51,7 +51,7 @@ export default function SidebarFilters() {
             </div>
             <section id="sidebar">
                 <div>
-                    <h6 className="p-1 border-bottom">Home Furniture</h6>
+                    <h6 className="p-1 border-bottom">Get Your Perfect Dress</h6>
                     <ul>
                         <li><a href="#">Living</a></li>
                         <li><a href="#">Dining</a></li>
