@@ -45,7 +45,7 @@ export default function SizePrediction() {
       {loading && (
         <div className="size-loading">
           <div id="container-loading">
-            <h1>Loading...</h1>
+            <h1 className="loading-h1">Loading...</h1>
             <div class="stick"></div>
             <div class="stick"></div>
             <div class="stick"></div>
@@ -53,7 +53,7 @@ export default function SizePrediction() {
             <div class="stick"></div>
             <div class="stick"></div>
 
-            <h1>Perfection needs Time...</h1>
+            <h1 className="loading-h1">Perfection needs Time...</h1>
           </div>
         </div>
       )}
@@ -61,7 +61,7 @@ export default function SizePrediction() {
         <div className="sizeContent">
           <div className="sizeResults">
             <div className="size-recommendation">
-              The Best Fit For You is{" "}
+              The Best Fit For You is
               <u class="underline-animation">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 255 32.61">
                   <path

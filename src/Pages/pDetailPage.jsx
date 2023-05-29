@@ -107,7 +107,13 @@ export default function PDetailPage(props) {
                         </div>
                     </div>
                     <div className="detailButtons">
-                        <button className="tryOnBtn">Try On</button>
+                        <button className="tryOnBtn">
+                            <Link to={"/clothImposing"} style={{
+                                color: "#fff"
+                            }}>
+                                Try On
+                            </Link>
+                        </button>
                         <button className="SizePredictionBtn ">
                             <Link to={"/sizePrediction"} style={{
                                 color: "#005968"

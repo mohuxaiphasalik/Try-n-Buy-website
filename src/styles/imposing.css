@@ -1,0 +1,45 @@
+:root {
+    --black: #646262;
+    --orange: #FA692F;
+    --green: #005968;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,700);
+
+/* upload Section */
+.uploadSection {
+    margin-bottom: 100px;
+}
+
+.file-upload {
+    font-size: 2rem;
+    width: 30%;
+    margin: 30px auto;
+    text-align: center;
+    font-family: "Lato";
+    font-weight: 400;
+}
+
+.upload-form {
+    display: flex;
+    align-items: center;
+    /* Vertical centering */
+}
+
+.input-group {
+    display: flex;
+    flex: 1;
+    /* Take up remaining horizontal space */
+    margin-left: 10px;
+    justify-content: center;
+}
+
+.browse {
+    margin-left: 10px;
+
+
+}
+
+.fa-image {
+    width: 20px;
+}
