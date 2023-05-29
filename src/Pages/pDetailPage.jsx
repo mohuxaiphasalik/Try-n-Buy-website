@@ -6,7 +6,6 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 import { useLocation } from "react-router-dom";
-import img from "../styles/images/DetailImages/boyt1.png";
 export default function PDetailPage(props) {
     const location = useLocation();
     const searchParams = new URLSearchParams(location.search);
@@ -41,9 +40,7 @@ export default function PDetailPage(props) {
         }
     }
 
-    const redirectSize = () => {
-        window.location.href = "http://127.0.0.1:8000";
-    };
+
     return (
         <div>
             <Navbar />
@@ -108,9 +105,7 @@ export default function PDetailPage(props) {
                     </div>
                     <div className="detailButtons">
                         <button className="tryOnBtn">
-                            <Link to={"/clothImposing"} style={{
-                                color: "#fff"
-                            }}>
+                            <Link to={{ pathname: '/clothImposing', search: `?img=${productDetail.img}` }}>
                                 Try On
                             </Link>
                         </button>
