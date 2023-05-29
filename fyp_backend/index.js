@@ -64,7 +64,7 @@ mongoose.connection.on('connected', () => {
       const user_db = await User.findOne({ email: user_raw.email });
       const user_jwt = jwt.verify(user_db.token, process.env.JWT_SECRET);
 
-      if (user_raw.email == user_jwt.user_raw.email && user_raw.password == user_jwt.user_raw.password) {
+      if (user_raw.email === user_jwt.user_raw.email && user_raw.password === user_jwt.user_raw.password) {
         res.send({ 'user_data': user_db, 'iat': user_jwt.iat });
       } else {
         res.status(400).send("Invalid email or password");
@@ -98,6 +98,13 @@ mongoose.connection.on('connected', () => {
       type: Number,
       default: 0,
       nonNegative: true,
+    },
+    detailDescription: {
+      type: String,
+      required: true,
+    },
+    detailImage: {
+      type: String,
     },
     discount: String
   });
