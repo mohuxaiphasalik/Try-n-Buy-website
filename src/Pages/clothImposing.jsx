@@ -25,9 +25,16 @@ export default function ClothImposing() {
         fileInputRef.current.click();
         console.log(imageArray);
     };
+<<<<<<< Updated upstream
 
     const handleSubmit = (event) => {
+||||||| Stash base
+    const handleSubmit = (event) => {
+=======
+    const handleSubmit = async (event) => {
+>>>>>>> Stashed changes
         event.preventDefault();
+<<<<<<< Updated upstream
         const formData = new FormData(event.target);
 
         // Add the image file stored in 'img1' variable to the form data
@@ -39,6 +46,21 @@ export default function ClothImposing() {
 
         const files = formData.getAll('files');
         console.log(files);
+||||||| Stash base
+        const formData = new FormData(event.target);
+        const files = formData.getAll('files');
+        // Do something with the files (e.g., upload them)
+=======
+        const formData = new FormData();
+        formData.append("file", event.target.files);
+
+        const response = await fetch("https://b476-35-247-131-48.ngrok-free.app/uploadfiles/", {
+            method: "POST",
+            body: formData,
+        });
+
+        console.log(response);
+>>>>>>> Stashed changes
     };
 
     return (
@@ -58,9 +80,14 @@ export default function ClothImposing() {
                                     <button className="browse btn btn-primary px-4" type="button" onClick={handleBrowseClick}>
                                         <i className="fas fa-image"></i> Browse
                                     </button>
+<<<<<<< Updated upstream
                                     <button className="submit btn btn-primary" type="submit">
                                         Submit
                                     </button>
+||||||| Stash base
+=======
+                                    <button className="browse btn btn-primary px-4" type="submit" onSubmit={handleSubmit}/>
+>>>>>>> Stashed changes
                                 </div>
                             </form>
                         </div>

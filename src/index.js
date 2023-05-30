@@ -6,6 +6,8 @@ import PDetailPage from './Pages/pDetailPage';
 import SizePrediction from './Pages/sizePrediction';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ClothImposing from './Pages/clothImposing';
+import SignupPage from './Pages/signup';
+import LoginPage from './Pages/login';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,6 +19,9 @@ root.render(
         <Route path="/productDetails" element={<PDetailPage />} />
         <Route path="/sizePrediction" element={<SizePrediction />} />
         <Route path="/clothImposing" element={<ClothImposing />} />
+        <Route path="/signup" element={<SignupPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        
       </Routes>
     </BrowserRouter>
   </>
